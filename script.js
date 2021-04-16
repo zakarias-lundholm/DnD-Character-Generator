@@ -2,28 +2,37 @@
 
  //Likely more simple to just use the index in the array than having names for each flag
 
+let sheet = document.querySelector("#sheet");
 let arrNames = ["Race: ", "Class: ", "Personality: "];
-let race1 = ["Human", "Elf", "Dwarf", "Thiefling", "Race: "];
-let classArr2 = ["Fighter", "Wizard", "Warlock", "Paladin", "Class: "];
-let personality3 = ["Tough", "Romantic", "Optmistic", "Pessimistic", "Personality: "];
-let tablesRoot = [race1, classArr2, personality3];
+let race = ["Human", "Elf", "Dwarf", "Thiefling", "Race: "];
+let classArr = ["Fighter", "Wizard", "Warlock", "Paladin", "Class: "];
+let personality = ["Tough", "Romantic", "Optmistic", "Pessimistic", "Personality: "];
+let tablesRoot = [race, classArr, personality];
 let tables = [];
-let flags = [];
-for (var i = 0; i < tablesRoot.length; i++) {
-    flags.push(true);
-}
+let checkboxes = document.querySelectorAll("input[type=checkbox]");
+
+let runButton = document.querySelector("#run");
+runButton.addEventListener("click", () => {
+    run();
+    console.log("hi");
+});
 
 run();
-
 
 function getRoll(table) {
     let roll = Math.floor(Math.random() * (table.length - 1));
     console.log(table[table.length - 1] + table[roll]);
+    let item = document.createElement("p");
+    let text = document.createTextNode(table[table.length - 1] + table[roll])
+    item.append(text);
+    sheet.append(item);
 }
 
 function run() {
-    for (var i = 0; i < flags.length; i++) {
-        if (flags[i] == true) {
+    sheet.innerHTML = "";
+    tables = [];
+    for (var i = 0; i < tablesRoot.length; i++) {
+        if (checkboxes[i].checked == true) {
             tables.push(tablesRoot[i]);
         }
     }
