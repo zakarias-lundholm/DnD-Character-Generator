@@ -7,21 +7,20 @@ let arrNames = ["Race: ", "Class: ", "Personality: "];
 let race = ["Human", "Elf", "Dwarf", "Thiefling", "Race: "];
 let classArr = ["Fighter", "Wizard", "Warlock", "Paladin", "Class: "];
 let personality = ["Tough", "Romantic", "Optmistic", "Pessimistic", "Personality: "];
-let tablesRoot = [race, classArr, personality];
+let testArr = ["1", "2", "3", "4", "5", "6", "7", "Test: "]
+let tablesRoot = [race, classArr, personality, testArr];
 let tables = [];
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
 let runButton = document.querySelector("#run");
 runButton.addEventListener("click", () => {
     run();
-    console.log("hi");
 });
 
 run();
 
 function getRoll(table) {
     let roll = Math.floor(Math.random() * (table.length - 1));
-    console.log(table[table.length - 1] + table[roll]);
     let item = document.createElement("p");
     let text = document.createTextNode(table[table.length - 1] + table[roll])
     item.append(text);
