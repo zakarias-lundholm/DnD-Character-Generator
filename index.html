@@ -5,28 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1 id="test">Test</h1>
-    <form id="settings">
-        <label>
-            <div><input type="checkbox" name="Checkbox" id="raceBox"> Race</div>
-            <div><input type="checkbox" name="Checkbox" id="classBox"> Class</div>
-            <div><input type="checkbox" name="Checkbox" id="personalityBox"> Personality</div>
-            <div><input type="checkbox" name="Checkbox" id="alignmentBox"> Alignment</div>
-            <div><input type="checkbox" name="Checkbox" id="strengthBox"> Strength</div>
-            <div><input type="checkbox" name="Checkbox" id="dexterityBox"> Dexterity</div>
-            <div><input type="checkbox" name="Checkbox" id="constitutionBox"> Constitution</div>
-            <div><input type="checkbox" name="Checkbox" id="intelligenceBox"> Intelligence</div>
-            <div><input type="checkbox" name="Checkbox" id="wisdomBox"> Wisdom</div>
-            <div><input type="checkbox" name="Checkbox" id="charismaBox"> Charisma</div>
-            <div><input type="checkbox" name="Checkbox" id="skillsBox"> Skills</div>
-        </label>
-        <label>
-            <input type="button" id="run"> Run
-        </label>
+    <h1>Dungeons & Dragons 5e Character Generator</h1>
+    <form id="settings" class="formflex">
+        <div class="inputsflex">
+            <div id="racecheck"><input type="checkbox" name="Checkbox" id="raceBox"><label for="raceBox">Race</label></div>
+            <div id="classcheck"><input type="checkbox" name="Checkbox" id="classBox"><label for="classBox">Class</label></div>
+            <div id="skillscheck"><input type="checkbox" name="Checkbox" id="skillsBox"><label for="skillsBox">Skills</label></div>
+            <div id="alignmentcheck"><input type="checkbox" name="Checkbox" id="alignmentBox"><label for="alignmentBox">Alignment</label></div>
+            <div id="statscheck"><input type="checkbox" name="notCheckbox" id="statsBox"><label for="statsBox">Stats</label></div>
+            <div id="strengthcheck"><input type="checkbox" name="Checkbox" id="strengthBox"><label for="strengthBox">Strength</label></div>
+            <div id="dexteritycheck"><input type="checkbox" name="Checkbox" id="dexterityBox"><label for="dexterityBox">Dexterity</label></div>
+            <div id="constitutioncheck"><input type="checkbox" name="Checkbox" id="constitutionBox"><label for="constitutionBox">Constitution</label></div>
+            <div id="intelligencecheck"><input type="checkbox" name="Checkbox" id="intelligenceBox"><label for="intelligenceBox">Intelligence</label></div>
+            <div id="wisdomcheck"><input type="checkbox" name="Checkbox" id="wisdomBox"><label for="wisdomBox">Wisdom</label></div>
+            <div id="charismacheck"><input type="checkbox" name="Checkbox" id="charismaBox"><label for="charismaBox">Charisma</label></div>
+        </div>
+        <div class="runbutton">
+            <input type="button" id="run" value="Run">
+        </div>
     </form>
-    <div id="sheet"></div>
+    <div class="results">
+        <h2>Results</h2>
+        <div id="sheet"></div>
+    </div>
 </body>
 </html>
